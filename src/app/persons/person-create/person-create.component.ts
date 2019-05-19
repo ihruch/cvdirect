@@ -12,7 +12,7 @@ import { MessagesService } from  "./../../shared/services/messages.service";
 })
 export class PersonCreateComponent implements OnInit {
   createForm: FormGroup;
-  avatarUrl: string = '';
+  avatarUrl: string = 'https://via.placeholder.com/128x128';
   public editInProgress = false;
   
   constructor(  
@@ -65,7 +65,7 @@ export class PersonCreateComponent implements OnInit {
 
   
   onAttachPic(e){
-    console.log('photo', e.target.files)
+ 
     if(e.target.files && e.target.files[0]){
       const reader = new FileReader();
       reader.readAsDataURL(e.target.files[0])
